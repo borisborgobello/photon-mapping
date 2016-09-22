@@ -33,7 +33,6 @@ int main(int argc, char ** argv)
             out_image_name = "result_image.tga";
             out_photonmap_image_name = "result_pm.tga";
             photon_map = true;
-            display = true;
         }
         else if (temp_string.find("--out=") != -1) out_image_name = temp_string.substr(6);
         else if (temp_string.find("--photonmap=") != -1) {
@@ -54,9 +53,10 @@ int main(int argc, char ** argv)
         cout << "first paramless argument : Input YAML file" << endl << endl;
 
         cout << "The YAML file to read must be specified on the command line" << endl;
-        cout << "Example :" << endl;
-        cout << "./photon_mapping --display --out=out.tga --photonmap=pm.tga tests/cornel_box.txt" << endl;
-        cout << "./photon_mapping -t tests/cornel_box.txt" << endl;
+        cout << "KNOWN BUGS : The cornel_box file has to be in the same directory as the executable call" << endl;
+        cout << "Example from the test folder :" << endl;
+        cout << "cd tests/test1 && ./../bin/photon_mapping --display --out=out.tga --photonmap=pm.tga cornel_box.txt" << endl;
+        cout << "cd tests/test1 && ./../bin/photon_mapping -t cornel_box.txt" << endl;
         return 0;
     }
 
