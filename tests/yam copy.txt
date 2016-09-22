@@ -1,0 +1,89 @@
+﻿LOADING:
+  - yam.txt
+TEXTURES:
+  -Rouge:
+    type: Color
+    color: [255, 0, 0]
+  -Bleu:
+    type: Color
+    color: [0, 0, 255]
+  -Vert:
+    type: Color
+    color: [0, 255, 0]
+OBJECTS:
+  -FACE:
+    type: Plane
+    texture: Vert
+    absorb: 0.2
+    reflect: 0.8
+    transparency: 0
+    point: [0, 0, 0]
+    normal: [0, 0, 1]
+  -LEFT:
+    type: Plane
+    texture: Bleu
+    absorb: 0.2
+    reflect: 0.8
+    transparency: 0
+    point: [0, 0, 0]
+    normal: [1, 0, 0]
+  -RIGHT:
+    type: Plane
+    texture: Rouge
+    absorb: 0.2
+    reflect: 0.8
+    transparency: 0
+    point: [1, 0, 0]
+    normal: [-1, 0, 0]
+  -UP:
+    type: Plane
+    texture: Vert
+    absorb: 0.2
+    reflect: 0.8
+    transparency: 0
+    point: [0, 1, 0]
+    normal: [0, -1, 0]
+  -DOWN:
+    type: Plane
+    texture: Bleu
+    absorb: 0.2
+    reflect: 0.8
+    transparency: 0
+    point: [0, 0, 0]
+    normal: [0, 1, 0]
+CAMERAS:
+  -MaCamera:
+    type: Conic
+    origine: [0, 0, 0]
+    vector1: [0, 0, 0]
+    vector2: [0, 0, 0]
+    size1: 0
+    size2: 0
+  -maSuperCamera:
+    type: Planar
+    origine: [0, 0, 0]
+    vector1: [0, 0, 0]
+    vector2: [0, 0, 0]
+    size1: 0
+    size2: 0
+LIGHTS:
+  -redEye:
+    type: Punctual
+    color: [255, 172, 325]
+    power: 0.8
+    origine: [0, 0, 0]
+  -Hemi1:
+    type: Hemispherical
+    color: [255, 172, 325]
+    power: 0.8
+    origine: [255, 172, 325]
+    direction: [255, 172, 325]
+SCENE:
+  resolution: [900, 600]
+  supersampling: true
+  nb_photon_MAX: 100000
+  photon_depth: 4
+  raytracer_depth: 400
+  camera: maSuperCamera
+  objects: [MaSphere]
+  lights: [redEye, GlobalLight1]

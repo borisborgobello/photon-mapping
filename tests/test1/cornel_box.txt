@@ -1,0 +1,115 @@
+﻿LOADING:
+  - cornel_box_2.txt
+TEXTURES:
+  -Rouge:
+    type: Color
+    color: [1, 0, 0]
+  -Bleu:
+    type: Color
+    color: [0, 0, 1]
+  -Vert:
+    type: Color
+    color: [0, 1, 0]
+  -Violet:
+    type: Color
+    color: [1, 0, 1]
+  -Jaune:
+    type: Color
+    color: [1, 1, 0]
+  -Blanc:
+    type: Color
+    color: [1, 1, 1]
+  -Orange:
+    type: Color
+    color: [1, 0.5, 0]
+  -Check1:
+    type: Checkers
+    text_x: [0, 0, 1]
+    text_y: [0, 1, 0]
+    x_dim: 0.15
+    y_dim: 0.15
+    even: [0, 0, 0]
+    odd: [1, 1, 1]
+  -Check2:
+    type: Checkers
+    text_x: [0, 0, 1]
+    text_y: [0, 1, 0]
+    x_dim: 0.15
+    y_dim: 0.15
+    even: [0, 0, 0]
+    odd: [1, 1, 1]
+  -Spy:
+    type: Bitmap
+    text_x: [0, 0, 1]
+    text_y: [0, 1, 0]
+    x_dim: 2
+    y_dim: 2
+    file: spy.tga
+  -Polytech:
+    type: Bitmap
+    text_x: [0, 0, 1]
+    text_y: [0, 1, 0]
+    x_dim: 2
+    y_dim: 2
+    file: polytech.tga
+OBJECTS:
+  -TRIANGLE:
+    type: Triangle
+    texture: Blanc
+    absorb: 0.8
+    reflect: 0.2
+    transparency: 0
+    point1: [-0.6, -1, -1]
+    point2: [0, -1, 1]
+    point3: [0, 0.8, 0]
+    for_volume: false
+  -FACE:
+    type: Plane
+    texture: Polytech
+    absorb: 0.95
+    reflect: 0.05
+    transparency: 0
+    point: [1, -1, -1]
+    normal: [-1, 0, 0]
+  -LEFT:
+    type: Plane
+    texture: Rouge
+    absorb: 0.3
+    reflect: 0.7
+    transparency: 0
+    point: [0, 0, -1]
+    normal: [0, 0, 1]
+  -RIGHT:
+    type: Plane
+    texture: Bleu
+    absorb: 0.3
+    reflect: 0.7
+    transparency: 0
+    point: [0, 0, 1]
+    normal: [0, 0, 1]
+  -UP:
+    type: Plane
+    texture: Jaune
+    absorb: 1
+    reflect: 0
+    transparency: 0
+    point: [0, 1, 0]
+    normal: [0, -1, 0]
+  -DOWN:
+    type: Plane
+    texture: Violet
+    absorb: 0.95
+    reflect: 0.05
+    transparency: 0
+    point: [0, -1, 0]
+    normal: [0, -1, 0]
+SCENE:
+  resolution: [100, 100]
+  supersampling: false
+  nb_photon_MAX: 100000
+  nb_photon_to_find: 5
+  photon_depth: 40
+  raytracer_depth: 4
+  camera: Ze_camera
+  objects: [UP, DOWN, LEFT, RIGHT, FACE, SPHERE1, SPHERE3, PARA1]
+  lights: [Radiant_SPHERE, Glob]

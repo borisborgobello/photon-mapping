@@ -1,0 +1,50 @@
+﻿OBJECTS:
+  -SPHERE1:
+    type: Sphere
+    texture: Rouge
+    absorb: 1
+    reflect: 0
+    refract: 0
+    indice: 1.2
+    center: [0, 0.4, -0.7]
+    radius: 0.2
+
+
+
+
+  -SPHERE2:
+    type: Sphere
+    texture: Bleu
+    absorb: 1
+    reflect: 0
+    refract: 0
+    indice: 1.2
+    center: [0.6, -0.7, 0.5]
+    radius: 0.8
+  -SPHERE3:
+    type: Sphere
+    texture: Jaune
+    absorb: 1
+    reflect: 0
+    refract: 0
+    indice: 1.2
+    center: [0, 0.5, 0.4]
+    radius: 0.3
+
+
+
+
+CAMERAS:
+  -Ze_camera:
+    type: Conic
+    origine: [-8, 0, 0]
+    vector1: [0, 0, -1]
+    vector2: [0, 1, 0]
+    size1: 1.2
+    size2: 1.2
+LIGHTS:
+  -Ponctu_ONE:
+    type: Punctual
+    color: [0.8, 0.7, 1]
+    power: 1
+    origine: [-1, 0.5, 0.5]

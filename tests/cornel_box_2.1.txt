@@ -1,0 +1,75 @@
+﻿LOADING:
+  - cornel_box_2.2.txt
+TEXTURES:
+  -Rouge:
+    type: Color
+    color: [1, 0, 0]
+  -Bleu:
+    type: Color
+    color: [0, 0, 1]
+  -Vert:
+    type: Color
+    color: [0, 1, 0]
+  -Violet:
+    type: Color
+    color: [1, 0, 1]
+  -Jaune:
+    type: Color
+    color: [1, 1, 0]
+  -Blanc:
+    type: Color
+    color: [1, 1, 1]
+  -Orange:
+    type: Color
+    color: [1, 0.5, 0]
+OBJECTS:
+  -FACE:
+    type: Plane
+    texture: Blanc
+    absorb: 1
+    reflect: 0
+    transparency: 0
+    point: [1, 0, 0]
+    normal: [-1, 0, 0]
+  -LEFT:
+    type: Plane
+    texture: Rouge
+    absorb: 1
+    reflect: 0
+    transparency: 0
+    point: [0, 0, -1]
+    normal: [0, 0, 1]
+  -RIGHT:
+    type: Plane
+    texture: Bleu
+    absorb: 1
+    reflect: 0
+    transparency: 0
+    point: [0, 0, 1]
+    normal: [0, 0, -1]
+  -UP:
+    type: Plane
+    texture: Blanc
+    absorb: 1
+    reflect: 0
+    transparency: 0
+    point: [0, 1, 0]
+    normal: [0, -1, 0]
+  -DOWN:
+    type: Plane
+    texture: Violet
+    absorb: 1
+    reflect: 0
+    transparency: 0
+    point: [0, -1, 0]
+    normal: [0, 1, 0]
+SCENE:
+  resolution: [800, 600]
+  supersampling: true
+  nb_photon_MAX: 500
+  nb_photon_to_find: 30
+  photon_depth: 50
+  raytracer_depth: 0
+  camera: Ze_camera
+  objects: [PLAN1, SPHERE1]
+  lights: [Ponctu_ONE]

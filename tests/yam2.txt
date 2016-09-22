@@ -1,0 +1,60 @@
+﻿LOADING:
+  - yam.txt
+TEXTURES:
+  -myDam:
+    type: Checkers
+    x_dim: 50
+    y_dim: 50
+    even: [4, 3, 231]
+    odd: [4, 3, 231]
+OBJECTS:
+  -MaShere:
+    type: Sphere
+    texture: Rouge
+    absorb: 0.7
+    reflect: 0.2
+    refract: 0.1
+    indice: 1.2
+    center: [4, 3, 231]
+    radius: 140
+  -MonPlan:
+    type: Plane
+    texture: Rouge
+    absorb: 0.7
+    reflect: 0.2
+    transparency: 0.1
+    point: [4, 3, 231]
+    normal: [140, 0, 3.0]
+CAMERAS:
+  -MaCamera:
+    type: Conic
+    origine: [0, 0, 0]
+    vector1: [0, 0, 0]
+    vector2: [0, 0, 0]
+    size1: 0
+    size2: 0
+  -maSuperCamera:
+    type: Planar
+    origine: [0, 0, 0]
+    vector1: [0, 0, 0]
+    vector2: [0, 0, 0]
+    size1: 0
+    size2: 0
+LIGHTS:
+  -redEye:
+    type: Punctual
+    color: [255, 172, 325]
+    power: 0.8
+    origine: [0, 0, 0]
+  -GlobalLight1:
+    type: GlobalLighting
+    color: [255, 172, 325]
+    power: 0.8
+SCENE:
+  resolution: [800, 600]
+  supersampling: true
+  nb_photon_MAX: 10000
+  depth_level: 4
+  camera: maSuperCamera
+  objects: [MaSphere, MonAutreSphere]
+  lights: [redEye, GlobalLight1]
