@@ -29,7 +29,13 @@ int main(int argc, char ** argv)
 
     for (int i = 1 ; i < argc; i++) {
         temp_string = argv[i];
-        if (temp_string.find("--out=") != -1) out_image_name = temp_string.substr(6);
+        if (temp_string.find("-t") != -1) {
+            out_image_name = "result_image.tga";
+            out_photonmap_image_name = "result_pm.tga";
+            photon_map = true;
+            display = true;
+        }
+        else if (temp_string.find("--out=") != -1) out_image_name = temp_string.substr(6);
         else if (temp_string.find("--photonmap=") != -1) {
             out_photonmap_image_name = temp_string.substr(12);
             photon_map = true;
@@ -40,7 +46,17 @@ int main(int argc, char ** argv)
     }
 
     if (argc == 1 || in_filename == "none") {
+        cout << "Usage :" << endl;
+        cout << "--out=FILENAME : File for output image" << endl;
+        cout << "--photonmap=FILENAME : File for output photon map image" << endl;
+        cout << "--display : Display the image immediately after the computation has ended" << endl << endl;
+        cout << "-t : Basic testing params -> generates image and photonmap inside result_image and result_pm" << endl << endl;
+        cout << "first paramless argument : Input YAML file" << endl << endl;
+
         cout << "The YAML file to read must be specified on the command line" << endl;
+        cout << "Example :" << endl;
+        cout << "./photon_mapping --display --out=out.tga --photonmap=pm.tga tests/cornel_box.txt" << endl;
+        cout << "./photon_mapping -t tests/cornel_box.txt" << endl;
         return 0;
     }
 

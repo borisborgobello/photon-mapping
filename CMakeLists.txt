@@ -15,7 +15,7 @@ file(GLOB_RECURSE proj_files src/*)
 include_directories(extlibs/boost-1.61.0-custom/subcore)
 include_directories(extlibs/boost-1.61.0-custom/flattened_smart_ptr)
 include_directories(extlibs/yaml-cpp/include)
-include_directories(extlibs/eigen-3.2.9)
+include_directories(extlibs/eigen2)
 include_directories(extlibs/libssrckdtree-1.0.8)
 include_directories(src)
 
@@ -24,3 +24,4 @@ add_executable(
 	${yaml}
 	${proj_files}
 )
+
